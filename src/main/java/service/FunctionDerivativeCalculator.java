@@ -16,7 +16,8 @@ public class FunctionDerivativeCalculator implements Function<Double,Double> {
     @Override
     public Double apply(Double result) {
         Double value = 0.0;
-        Date maxDate = Utility.getMaxDateInTransaction(transactions);
+        // last index is max date as it is sorted
+        Date maxDate = transactions.get(transactions.size()-1).getDate();
         for(Transaction transaction : transactions){
             Date date = transaction.getDate();
             Double period = Utility.findDifferenceInYears(date,maxDate);

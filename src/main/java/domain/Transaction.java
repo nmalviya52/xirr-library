@@ -7,7 +7,7 @@ import lombok.Setter;
 import java.util.Date;
 
 @Getter @Setter
-public class Transaction {
+public class Transaction implements Comparable<Transaction> {
     Date date;
     Double value;
 
@@ -16,5 +16,8 @@ public class Transaction {
         this.value=value;
     }
 
-
+    @Override
+    public int compareTo(Transaction o) {
+        return this.getDate().compareTo(o.getDate());
+    }
 }

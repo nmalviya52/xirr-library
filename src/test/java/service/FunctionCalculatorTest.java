@@ -1,3 +1,5 @@
+package service;
+
 import domain.Transaction;
 import org.junit.Test;
 import service.FunctionCalculator;
@@ -6,6 +8,7 @@ import service.FunctionDerivativeCalculator;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -35,8 +38,9 @@ public class FunctionCalculatorTest {
         Date date2 = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2011");
         Transaction transaction2 = new Transaction(date2, -200.0d);
         transactionList.add(transaction2);
+        Collections.sort(transactionList);
         FunctionDerivativeCalculator functionDerivativeCalculator = new FunctionDerivativeCalculator(transactionList);
         Double result = functionDerivativeCalculator.apply(1.0d);
-        assertEquals(0.0d, result, 0.00001);
+        assertEquals(100.0d, result, 0.000001);
     }
 }
