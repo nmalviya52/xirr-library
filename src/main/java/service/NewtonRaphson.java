@@ -19,6 +19,11 @@ public class NewtonRaphson {
         this.derivativeFunction = derivativeFunction;
     }
 
+    /**
+     * Iterative applies newton raphson to get final result with maximum iteration upto newtonRaphsonParameter.iteration or till
+     * the error is less than newtonRaphsonParameter.error with the initial guess newtonRaphsonparameter.guess
+     * @return
+     */
     public double findResult() {
         Double result = newtonRaphsonParameter.getGuess();
         for (int i = 0; i < newtonRaphsonParameter.getIterations(); i++) {
