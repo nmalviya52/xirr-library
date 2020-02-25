@@ -24,6 +24,15 @@ public class XirrCalculatorTest {
     }
 
     @Test
+    public void testCalculateXirrMethodWithValue() throws ParseException {
+        List<Transaction> transactionList = new ArrayList<>();
+        transactionList.add(this.getTransactionFrom("01/01/2010",100.0d));
+        XirrCalculator xirrCalculator = new XirrCalculator();
+        Double result = xirrCalculator.calculate(transactionList,200.0d,  new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2011"), NewtonRaphsonParameter.builder());
+        assertEquals(1.0d, result,Constants.NR_ERROR);
+    }
+
+    @Test
     public void testCalculateXirrMethod2() throws ParseException{
         List<Transaction> transactionList = new ArrayList<>();
         transactionList.add(this.getTransactionFrom("01/01/1993",	5000.0d));
