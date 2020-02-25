@@ -25,5 +25,4 @@ public class FunctionDerivativeCalculator implements Function<Double,Double> {
         }
         return value;
     }
-
 }
