@@ -23,7 +23,7 @@ public class NewtonRaphson {
         Double result = newtonRaphsonParameter.getGuess();
         for (int i = 0; i < newtonRaphsonParameter.getIterations(); i++) {
             Double functionValue = (Double) function.apply(result);
-            Double derivativeValue = (Double) function.apply(result);
+            Double derivativeValue = (Double) derivativeFunction.apply(result);
             Double newResult = result - (functionValue * 1.0) / derivativeValue;
             result = newResult;
             Double newValue = (Double) function.apply(result);
