@@ -16,7 +16,7 @@ public class UtlityTest{
         Date date1=new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2010");
         Date date2 = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2011");
         Double result = Utility.findDifferenceInYears(date1,date2);
-        assertEquals(1.0d, result,0.000000001d);
+        assertEquals(1.0d, result,Constants.NR_ERROR);
     }
 
     @Test
@@ -24,6 +24,6 @@ public class UtlityTest{
         Date date1=new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2010");
         Date date2 = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2011");
         Double result = Utility.findDifferenceInDays(date1,date2);
-        assertEquals(365.0d, result,0.000000001d);
+        assertEquals(365.0d, result,Constants.NR_ERROR);
     }
 }

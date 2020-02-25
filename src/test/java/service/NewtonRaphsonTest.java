@@ -24,6 +24,6 @@ public class NewtonRaphsonTest {
         transactionList.add(transaction2);
         NewtonRaphsonParameter newtonRaphsonParameter = NewtonRaphsonParameter.builder().error(0.000001).guess(10.0).iterations(1000).build();
         Double result = new NewtonRaphson(new FunctionCalculator(transactionList),new FunctionDerivativeCalculator(transactionList),newtonRaphsonParameter).findResult();
-        assertEquals(1.0d,result,0.0000001d);
+        assertEquals(1.0d,result,Constants.NR_ERROR);
     }
 }

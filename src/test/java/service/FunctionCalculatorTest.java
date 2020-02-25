@@ -26,7 +26,7 @@ public class FunctionCalculatorTest {
         transactionList.add(transaction2);
         FunctionCalculator functionCalculator = new FunctionCalculator(transactionList);
         Double result = functionCalculator.apply(1.0d);
-        assertEquals(0.0d, result, 0.00001);
+        assertEquals(0.0d, result, Constants.NR_ERROR);
     }
 
     @Test
