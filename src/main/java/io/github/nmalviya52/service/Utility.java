@@ -1,4 +1,4 @@
-package service;
+package io.github.nmalviya52.service;
 
 import java.util.Date;
 

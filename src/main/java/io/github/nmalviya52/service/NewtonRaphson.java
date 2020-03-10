@@ -1,6 +1,6 @@
-package service;
+package io.github.nmalviya52.service;
 
-import domain.NewtonRaphsonParameter;
+import io.github.nmalviya52.domain.NewtonRaphsonParameter;
 import lombok.Getter;
 import lombok.Setter;
 

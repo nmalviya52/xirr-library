@@ -1,4 +1,4 @@
-package domain;
+package io.github.nmalviya52.domain;
 
 import lombok.Builder;
 import lombok.Getter;

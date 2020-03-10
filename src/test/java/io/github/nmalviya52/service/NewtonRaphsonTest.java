@@ -1,7 +1,7 @@
-package service;
+package io.github.nmalviya52.service;
 
-import domain.NewtonRaphsonParameter;
-import domain.Transaction;
+import io.github.nmalviya52.domain.NewtonRaphsonParameter;
+import io.github.nmalviya52.domain.Transaction;
 import org.junit.Test;
 
 import java.text.ParseException;
@@ -23,7 +23,7 @@ public class NewtonRaphsonTest {
         Transaction transaction2 = new Transaction(date2, -200.0d);
         transactionList.add(transaction2);
         NewtonRaphsonParameter newtonRaphsonParameter = NewtonRaphsonParameter.builder().error(0.000001).guess(10.0).iterations(1000).build();
-        Double result = new NewtonRaphson(new FunctionCalculator(transactionList),new FunctionDerivativeCalculator(transactionList),newtonRaphsonParameter).findResult();
-        assertEquals(1.0d,result,Constants.NR_ERROR);
+        Double result = new NewtonRaphson(new FunctionCalculator(transactionList), new FunctionDerivativeCalculator(transactionList), newtonRaphsonParameter).findResult();
+        assertEquals(1.0d, result, Constants.NR_ERROR);
     }
 }

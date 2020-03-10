@@ -1,7 +1,7 @@
-package service;
+package io.github.nmalviya52.service;
 
-import domain.NewtonRaphsonParameter;
-import domain.Transaction;
+import io.github.nmalviya52.domain.NewtonRaphsonParameter;
+import io.github.nmalviya52.domain.Transaction;
 
 import java.util.ArrayList;
 import java.util.Collections;
