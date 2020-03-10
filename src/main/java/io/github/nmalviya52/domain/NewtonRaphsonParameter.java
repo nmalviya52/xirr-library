@@ -3,7 +3,7 @@ package io.github.nmalviya52.domain;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import service.Constants;
+import io.github.nmalviya52.service.Constants;
 
 @Getter @Setter @Builder
 public class NewtonRaphsonParameter {
